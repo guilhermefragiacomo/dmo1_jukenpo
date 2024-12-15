@@ -5,11 +5,11 @@ plugins {
 
 android {
     namespace = "br.edu.ifsp.dmo.pedratesourapapel"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "br.edu.ifsp.dmo.pedratesourapapel"
-        minSdk = 30
+        minSdk = 33
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -32,6 +32,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    viewBinding {
+        enable = true;
     }
 }
 
