@@ -52,4 +52,13 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edittext_player2" />
+    <TextView
+        android:id="@+id/obs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="@string/obs"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="spinner_buttles"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_buttles" />
 </androidx.constraintlayout.widget.ConstraintLayout>
