@@ -10,7 +10,10 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import br.edu.ifsp.dmo.pedratesourapapel.R
 import br.edu.ifsp.dmo.pedratesourapapel.databinding.ActivityWarBinding
+import br.edu.ifsp.dmo.pedratesourapapel.model.Paper
 import br.edu.ifsp.dmo.pedratesourapapel.model.Player
+import br.edu.ifsp.dmo.pedratesourapapel.model.Rock
+import br.edu.ifsp.dmo.pedratesourapapel.model.Scissors
 import br.edu.ifsp.dmo.pedratesourapapel.model.War
 import br.edu.ifsp.dmo.pedratesourapapel.model.Weapon
 class WarActivity : AppCompatActivity() {
@@ -86,6 +89,14 @@ class WarActivity : AppCompatActivity() {
                         ) as Weapon
                         if (number == 1)
                             weaponPlayer1 = chosenWeapon
+                            if (war.opponent2.name.contains("(bot)")) {
+                                weaponPlayer2 = when ((0..2).random()) {
+                                    0 -> Rock;
+                                    1 -> Paper;
+                                    2 -> Scissors;
+                                    else -> throw Exception();
+                                }
+                            }
                         if (number == 2)
                             weaponPlayer2 = chosenWeapon
                     }
